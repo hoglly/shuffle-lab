@@ -1,37 +1,50 @@
-export default function Home() {
+import Link from "next/link";
+
+export default function LandingPage() {
   return (
     <main className="min-h-screen bg-white text-zinc-900">
-      <div className="mx-auto max-w-4xl px-6 py-16">
-        <header className="mb-12">
-          <p className="mb-3 text-sm uppercase tracking-[0.2em] text-zinc-500">
-            Shuffle Lab
-          </p >
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            Small tools for curious minds.
-          </h1>
-          <p className="mt-4 text-lg text-zinc-600">
-            为好奇的人做的小工具。
-          </p >
-        </header>
+      <div className="mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center px-6 text-center">
+        <p className="mb-3 text-sm uppercase tracking-[0.2em] text-zinc-500">
+          Shuffle Lab
+        </p >
 
-        <section className="mb-12 grid gap-4 sm:grid-cols-2">
-          <a
-            href=" "
-            className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+          Choose your language
+        </h1>
+
+        <p className="mt-4 text-zinc-600">
+          Select a language to enter Shuffle Lab.
+        </p >
+
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <Link
+            href="/en"
+            className="rounded-xl border border-zinc-300 px-5 py-3 transition hover:border-zinc-500 hover:bg-zinc-50"
           >
-            <h2 className="text-xl font-semibold">Word Counter</h2>
-            <p className="mt-2 text-zinc-600">字数统计工具</p >
-          </a >
+            English
+          </Link>
 
-          <div className="rounded-2xl border border-dashed border-zinc-200 p-6 text-zinc-400">
-            <h2 className="text-xl font-semibold">More tools coming soon</h2>
-            <p className="mt-2">更多工具正在路上</p >
-          </div>
-        </section>
+          <Link
+            href="/zh"
+            className="rounded-xl border border-zinc-300 px-5 py-3 transition hover:border-zinc-500 hover:bg-zinc-50"
+          >
+            中文
+          </Link>
 
-        <footer className="border-t border-zinc-200 pt-6 text-sm text-zinc-500">
-          <p>Built for the web. Built step by step.</p >
-        </footer>
+          <button
+            disabled
+            className="cursor-not-allowed rounded-xl border border-zinc-200 px-5 py-3 text-zinc-400"
+          >
+            ไทย · Coming Soon
+          </button>
+
+          <button
+            disabled
+            className="cursor-not-allowed rounded-xl border border-zinc-200 px-5 py-3 text-zinc-400"
+          >
+            日本語 · Coming Soon
+          </button>
+        </div>
       </div>
     </main>
   );

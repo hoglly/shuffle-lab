@@ -1,0 +1,94 @@
+{
+  "normal": {
+    "openings": [
+      "Sorry,",
+      "Quick heads up —",
+      "Just so you know,",
+      "Apologies,",
+      "This might sound silly but",
+      "Small situation here —"
+    ],
+
+    "times": [
+      "this morning",
+      "a few minutes ago",
+      "right before leaving",
+      "just now",
+      "earlier today"
+    ],
+
+    "incidents": [
+      "I couldn't find my keys anywhere",
+      "my stomach suddenly betrayed me",
+      "my cat knocked over a glass of water",
+      "the bus was unexpectedly delayed",
+      "my phone died at the worst time",
+      "I couldn't find the other sock",
+      "my neighbor started drilling the wall",
+      "my food delivery arrived at the exact wrong moment",
+      "I spilled coffee on my desk",
+      "I had to deal with something unexpected at home",
+      "the door lock decided to be difficult",
+      "I got stuck in an unusually long line",
+      "my laundry situation became chaotic"
+    ],
+
+    "chaos": [
+      "and I had to deal with it",
+      "and it took longer than expected",
+      "so things got delayed a bit",
+      "and I needed a moment to sort it out",
+      "and everything slowed down after that"
+    ],
+
+    "results": [
+      "so I'm running a little late.",
+      "so I just got back.",
+      "so I'm catching up now.",
+      "so everything shifted slightly.",
+      "so I needed a bit more time."
+    ]
+  },
+
+  "dramatic": {
+    "openings": [
+      "You won't believe this but",
+      "This is embarrassing but",
+      "I swear this actually happened —",
+      "So today decided to be chaotic and",
+      "Against all odds,"
+    ],
+
+    "times": [
+      "right before leaving",
+      "five minutes before I left",
+      "at the worst possible moment",
+      "just as everything was ready"
+    ],
+
+    "incidents": [
+      "my stomach suddenly declared an emergency",
+      "I couldn't find my keys anywhere",
+      "my cat caused a small disaster",
+      "my coffee attacked my desk",
+      "the bus decided not to exist",
+      "my sock situation completely fell apart",
+      "my phone died dramatically",
+      "my neighbor started drilling like a construction site"
+    ],
+
+    "chaos": [
+      "and then it somehow got worse",
+      "and I had to deal with the aftermath",
+      "and everything slowed down instantly",
+      "and the situation escalated quickly"
+    ],
+
+    "results": [
+      "so now I'm late but alive.",
+      "so everything shifted a bit today.",
+      "so that completely destroyed my timing.",
+      "so here I am finally back."
+    ]
+  }
+}
