@@ -17,7 +17,7 @@ export default async function LocalizedHomePage({
 
   return (
     <main className="min-h-screen bg-white text-zinc-900">
-      <div className="mx-auto max-w-4xl px-6 py-16">
+      <div className="mx-auto max-w-5xl px-6 py-16">
         <div className="mb-8 flex items-center justify-between">
           <Link href="/" className="text-sm text-zinc-500 hover:text-zinc-800">
             ← {dict.common.language}
@@ -47,7 +47,7 @@ export default async function LocalizedHomePage({
           </div>
         </div>
 
-        <header className="mb-12">
+        <header className="mb-14">
           <p className="mb-3 text-sm uppercase tracking-[0.2em] text-zinc-500">
             {dict.site.name}
           </p >
@@ -57,31 +57,73 @@ export default async function LocalizedHomePage({
           <p className="mt-4 text-lg text-zinc-600">{dict.site.subtitle}</p >
         </header>
 
-        <section className="mb-12 grid gap-4 sm:grid-cols-2">
-          <Link
-            href={`/${lang}/word-counter`}
-            className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-          >
-            <h2 className="text-xl font-semibold">{dict.home.wordCounter}</h2>
-            <p className="mt-2 text-zinc-600">{dict.home.wordCounterDesc}</p >
-          </Link>
-
-          <Link
-            href={`/${lang}/excuse-generator`}
-            className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-          >
-            <h2 className="text-xl font-semibold">
-              {dict.home.excuseGenerator}
+        <section className="mb-14">
+          <div className="mb-5">
+            <h2 className="text-2xl font-semibold">
+              {dict.home.writingAndText}
             </h2>
-            <p className="mt-2 text-zinc-600">
-              {dict.home.excuseGeneratorDesc}
-            </p >
-          </Link>
+          </div>
 
-          <div className="rounded-2xl border border-dashed border-zinc-200 p-6 text-zinc-400">
-            <h2 className="text-xl font-semibold">{dict.home.comingSoon}</h2>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Link
+              href={`/${lang}/word-counter`}
+              className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+            >
+              <h3 className="text-xl font-semibold">{dict.home.wordCounter}</h3>
+              <p className="mt-2 text-zinc-600">{dict.home.wordCounterDesc}</p >
+            </Link>
+
+            <Link
+              href={`/${lang}/json-formatter`}
+              className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+            >
+              <h3 className="text-xl font-semibold">
+                {dict.home.jsonFormatter}
+              </h3>
+              <p className="mt-2 text-zinc-600">
+                {dict.home.jsonFormatterDesc}
+              </p >
+            </Link>
           </div>
         </section>
+
+        <section className="mb-14">
+          <div className="mb-5">
+            <h2 className="text-2xl font-semibold">
+              {dict.home.everydayUtilities}
+            </h2>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Link
+              href={`/${lang}/currency-converter`}
+              className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+            >
+              <h3 className="text-xl font-semibold">
+                {dict.home.currencyConverter}
+              </h3>
+              <p className="mt-2 text-zinc-600">
+                {dict.home.currencyConverterDesc}
+              </p >
+            </Link>
+
+            <Link
+              href={`/${lang}/excuse-generator`}
+              className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+            >
+              <h3 className="text-xl font-semibold">
+                {dict.home.excuseGenerator}
+              </h3>
+              <p className="mt-2 text-zinc-600">
+                {dict.home.excuseGeneratorDesc}
+              </p >
+            </Link>
+          </div>
+        </section>
+
+        <footer className="border-t border-zinc-200 pt-6 text-sm text-zinc-500">
+          <p>{dict.home.comingSoon}</p >
+        </footer>
       </div>
     </main>
   );
