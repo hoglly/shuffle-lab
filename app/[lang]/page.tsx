@@ -17,7 +17,7 @@ export default async function LocalizedHomePage({
 
   return (
     <main className="min-h-screen bg-white text-zinc-900">
-      <div className="mx-auto max-w-5xl px-6 py-16">
+      <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="mb-8 flex items-center justify-between">
           <Link href="/" className="text-sm text-zinc-500 hover:text-zinc-800">
             ← {dict.common.language}
@@ -64,7 +64,7 @@ export default async function LocalizedHomePage({
             </h2>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             <Link
               href={`/${lang}/word-counter`}
               className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
@@ -82,6 +82,18 @@ export default async function LocalizedHomePage({
               </h3>
               <p className="mt-2 text-zinc-600">
                 {dict.home.jsonFormatterDesc}
+              </p >
+            </Link>
+
+            <Link
+              href={`/${lang}/timestamp-converter`}
+              className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+            >
+              <h3 className="text-xl font-semibold">
+                {dict.home.timestampConverter}
+              </h3>
+              <p className="mt-2 text-zinc-600">
+                {dict.home.timestampConverterDesc}
               </p >
             </Link>
           </div>
@@ -116,6 +128,28 @@ export default async function LocalizedHomePage({
               </h3>
               <p className="mt-2 text-zinc-600">
                 {dict.home.excuseGeneratorDesc}
+              </p >
+            </Link>
+          </div>
+        </section>
+
+        <section className="mb-14">
+          <div className="mb-5">
+            <h2 className="text-2xl font-semibold">
+              {dict.home.industrialAndTesting}
+            </h2>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Link
+              href={`/${lang}/scpi-simulator`}
+              className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+            >
+              <h3 className="text-xl font-semibold">
+                {dict.home.scpiSimulator}
+              </h3>
+              <p className="mt-2 text-zinc-600">
+                {dict.home.scpiSimulatorDesc}
               </p >
             </Link>
           </div>
