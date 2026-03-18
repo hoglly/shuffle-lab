@@ -20,6 +20,10 @@ export const zh = {
 	timestampConverterDesc: "在 Unix 时间戳和可读日期之间快速转换。",
 	scpiSimulator: "SCPI 模拟器",
 	scpiSimulatorDesc: "快速模拟 SCPI 命令并测试仪器返回值。",
+	base64Tool: "Base64 编码 / 解码",
+	base64ToolDesc: "即时进行 Base64 编码与解码。",
+	modbusCrc: "Modbus CRC 计算器",
+	modbusCrcDesc: "计算 CRC16 并生成 RTU 帧。",
 	comingSoon: "更多工具即将上线",
   },
   common: {
@@ -116,5 +120,33 @@ export const zh = {
 	  invalidJson: "JSON 映射无效。",
 	  copySuccess: "已复制返回结果",
 	  mappingPlaceholder: "在这里编辑命令-返回值映射……"
+  },
+  base64Tool: {
+	  title: "Base64 编码 / 解码",
+	  subtitle: "将普通文本编码为 Base64，或将 Base64 解码回文本。",
+	  input: "输入",
+	  output: "输出结果",
+	  encode: "编码",
+	  decode: "解码",
+	  copy: "复制",
+	  clear: "清空",
+	  placeholder: "在这里粘贴文本……",
+	  empty: "这里还没有内容。",
+	  copied: "已复制到剪贴板",
+	  invalid: "Base64 输入无效。"
+  },
+  modbusCrc: {
+	  title: "Modbus CRC 计算器",
+	  subtitle: "计算 CRC16（Modbus）并生成完整 RTU 帧。",
+	  input: "十六进制输入",
+	  placeholder: "例如 01 03 00 00 00 0A",
+	  result: "计算结果",
+	  crc: "CRC（低字节在前）",
+	  frame: "完整帧",
+	  calculate: "计算",
+	  clear: "清空",
+	  copy: "复制",
+	  invalid: "输入的十六进制格式不正确。",
+	  copied: "已复制"
   },
 } as const;

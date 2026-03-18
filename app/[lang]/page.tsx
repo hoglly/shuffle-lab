@@ -64,7 +64,7 @@ export default async function LocalizedHomePage({
             </h2>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+		  <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2">
             <Link
               href={`/${lang}/word-counter`}
               className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
@@ -96,6 +96,17 @@ export default async function LocalizedHomePage({
                 {dict.home.timestampConverterDesc}
               </p >
             </Link>
+			<Link
+			  href={`/${lang}/base64`}
+			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+			>
+			  <h3 className="text-xl font-semibold">
+				{dict.home.base64Tool}
+			  </h3>
+			  <p className="mt-2 text-zinc-600">
+				{dict.home.base64ToolDesc}
+			  </p >
+			</Link>
           </div>
         </section>
 
@@ -150,6 +161,17 @@ export default async function LocalizedHomePage({
               </h3>
               <p className="mt-2 text-zinc-600">
                 {dict.home.scpiSimulatorDesc}
+              </p >
+            </Link>
+			
+			<Link href={`/${lang}/modbus-crc`}
+              className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+            >
+              <h3 className="text-xl font-semibold">
+                {dict.home.modbusCrc}
+              </h3>
+              <p className="mt-2 text-zinc-600">
+                {dict.home.modbusCrcDesc}
               </p >
             </Link>
           </div>

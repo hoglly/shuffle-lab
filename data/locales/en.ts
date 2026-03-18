@@ -20,6 +20,10 @@ export const en = {
 	timestampConverterDesc: "Convert between Unix timestamps and readable dates.",
 	scpiSimulator: "SCPI Simulator",
 	scpiSimulatorDesc: "Mock SCPI commands and test instrument responses quickly.",
+	base64Tool: "Base64 Encoder / Decoder",
+	base64ToolDesc: "Encode and decode Base64 text instantly.",
+	modbusCrc: "Modbus CRC Calculator",
+	modbusCrcDesc: "Calculate CRC16 (Modbus) and build RTU frames.",
 	comingSoon: "More tools coming soon",
   },
   common: {
@@ -116,5 +120,33 @@ export const en = {
 	  invalidJson: "Invalid JSON mapping.",
 	  copySuccess: "Response copied to clipboard",
 	  mappingPlaceholder: "Edit command-response pairs here..."
+  },
+  base64Tool: {
+	  title: "Base64 Encoder / Decoder",
+	  subtitle: "Encode plain text to Base64 or decode Base64 back to text.",
+	  input: "Input",
+	  output: "Output",
+	  encode: "Encode",
+	  decode: "Decode",
+	  copy: "Copy",
+	  clear: "Clear",
+	  placeholder: "Paste your text here...",
+	  empty: "Nothing to display yet.",
+	  copied: "Copied to clipboard",
+	  invalid: "Invalid Base64 input."
+  },
+  modbusCrc: {
+	  title: "Modbus CRC Calculator",
+	  subtitle: "Calculate CRC16 (Modbus) and generate full RTU frames.",
+	  input: "Hex Input",
+	  placeholder: "e.g. 01 03 00 00 00 0A",
+	  result: "Result",
+	  crc: "CRC (Low byte first)",
+	  frame: "Full Frame",
+	  calculate: "Calculate",
+	  clear: "Clear",
+	  copy: "Copy",
+	  invalid: "Invalid hex input.",
+	  copied: "Copied to clipboard"
   },
 } as const;
