@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/excuse-generator",
     "/scpi-simulator",
     "/base64",
+	"/modbus-crc",
   ];
 
   const langs = ["en", "zh"];
