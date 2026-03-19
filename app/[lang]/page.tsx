@@ -107,6 +107,17 @@ export default async function LocalizedHomePage({
 				{dict.home.base64ToolDesc}
 			  </p >
 			</Link>
+			<Link
+			  href={`/${lang}/uuid`}
+			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+			>
+			  <h3 className="text-xl font-semibold">
+				{dict.home.uuidTool}
+			  </h3>
+			  <p className="mt-2 text-zinc-600">
+				{dict.home.uuidToolDesc}
+			  </p >
+			</Link>
           </div>
         </section>
 

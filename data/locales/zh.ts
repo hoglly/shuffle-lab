@@ -24,6 +24,8 @@ export const zh = {
 	base64ToolDesc: "即时进行 Base64 编码与解码。",
 	modbusCrc: "Modbus CRC 计算器",
 	modbusCrcDesc: "计算 CRC16 并生成 RTU 帧。",
+	uuidTool: "UUID 生成器",
+	uuidToolDesc: "即时生成 UUID v4，适合开发和测试使用。",
 	comingSoon: "更多工具即将上线",
   },
   common: {
@@ -148,5 +150,14 @@ export const zh = {
 	  copy: "复制",
 	  invalid: "输入的十六进制格式不正确。",
 	  copied: "已复制"
+  },
+  uuidToolPage: {
+  title: "UUID 生成器",
+  subtitle: "生成 UUID v4，适合开发、数据库或测试使用。",
+  generate: "生成",
+  copy: "复制",
+  clear: "清空",
+  empty: "点击生成 UUID。",
+  copied: "已复制到剪贴板"
   },
 } as const;

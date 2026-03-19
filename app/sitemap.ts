@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/scpi-simulator",
     "/base64",
 	"/modbus-crc",
+	"/uuid",
   ];
 
   const langs = ["en", "zh"];

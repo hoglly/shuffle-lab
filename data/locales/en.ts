@@ -24,6 +24,8 @@ export const en = {
 	base64ToolDesc: "Encode and decode Base64 text instantly.",
 	modbusCrc: "Modbus CRC Calculator",
 	modbusCrcDesc: "Calculate CRC16 (Modbus) and build RTU frames.",
+	uuidTool: "UUID Generator",
+	uuidToolDesc: "Generate UUID v4 instantly for development and testing.",
 	comingSoon: "More tools coming soon",
   },
   common: {
@@ -148,5 +150,14 @@ export const en = {
 	  copy: "Copy",
 	  invalid: "Invalid hex input.",
 	  copied: "Copied to clipboard"
+  },
+  uuidToolPage: {
+  title: "UUID Generator",
+  subtitle: "Generate UUID v4 for development, databases, or testing.",
+  generate: "Generate",
+  copy: "Copy",
+  clear: "Clear",
+  empty: "Click generate to create UUID.",
+  copied: "Copied to clipboard"
   },
 } as const;
