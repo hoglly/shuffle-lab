@@ -166,7 +166,7 @@ export default function JsonFormatterPage({
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder={dict.jsonFormatter.placeholder}
-              className="min-h-[420px] w-full rounded-2xl border border-zinc-200 p-5 font-mono text-sm outline-none transition focus:border-zinc-400"
+              className="min-h-[420px] w-full rounded-2xl border border-zinc-200 p-5 font-mono text-sm outline-none"
             />
           </section>
 
@@ -175,11 +175,11 @@ export default function JsonFormatterPage({
               {dict.jsonFormatter.output}
             </label>
             <textarea
-              value={output}
-              readOnly
-              placeholder={dict.jsonFormatter.empty}
-              className="min-h-[420px] w-full rounded-2xl border border-zinc-200 p-5 font-mono text-sm outline-none"
-            />
+			  value={output}
+			  readOnly
+			  placeholder={dict.jsonFormatter.empty}
+			  className="min-h-[420px] w-full rounded-2xl border border-zinc-200 p-5 font-mono text-sm outline-none"
+			/>
           </section>
         </div>
 

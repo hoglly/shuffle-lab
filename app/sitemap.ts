@@ -14,6 +14,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/base64",
 	"/modbus-crc",
 	"/uuid",
+	"/jwt",
+	"/jwt",
+	"/modbus-frame",
   ];
 
   const langs = ["en", "zh"];

@@ -26,6 +26,10 @@ export const zh = {
 	modbusCrcDesc: "计算 CRC16 并生成 RTU 帧。",
 	uuidTool: "UUID 生成器",
 	uuidToolDesc: "即时生成 UUID v4，适合开发和测试使用。",
+	jwtTool: "JWT 解码器",
+	jwtToolDesc: "解析 JWT Token，查看 Header 和 Payload。",
+	modbusFrame: "Modbus 帧生成器",
+	modbusFrameDesc: "生成带 CRC 的 Modbus RTU 请求帧。",
 	comingSoon: "更多工具即将上线",
   },
   common: {
@@ -160,4 +164,32 @@ export const zh = {
   empty: "点击生成 UUID。",
   copied: "已复制到剪贴板"
   },
+  jwt: {
+	  title: "JWT 解码器",
+	  subtitle: "解析 JWT，查看 Header、Payload 和 Signature。",
+	  input: "输入 JWT",
+	  placeholder: "在这里粘贴 JWT...",
+	  decode: "解析",
+	  clear: "清空",
+	  invalid: "JWT 格式错误",
+  },
+  modbusFrame: {
+	  title: "Modbus 帧生成器",
+	  subtitle: "为常见读命令生成 Modbus RTU 请求帧。",
+	  slaveId: "从站地址",
+	  functionCode: "功能码",
+	  address: "起始地址",
+	  quantity: "数量",
+	  result: "结果",
+	  requestPdu: "请求数据",
+	  fullFrame: "完整 RTU 帧",
+	  calculate: "生成帧",
+	  clear: "清空",
+	  copy: "复制",
+	  invalid: "输入无效，请检查参数。",
+	  copied: "已复制到剪贴板",
+	  placeholderSlaveId: "例如 1",
+	  placeholderAddress: "例如 0",
+	  placeholderQuantity: "例如 10"
+　},
 } as const;

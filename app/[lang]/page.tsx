@@ -118,6 +118,17 @@ export default async function LocalizedHomePage({
 				{dict.home.uuidToolDesc}
 			  </p >
 			</Link>
+			<Link
+			  href={`/${lang}/jwt`}
+			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+			>
+			  <h3 className="text-xl font-semibold">
+				{dict.home.jwtTool}
+			  </h3>
+			  <p className="mt-2 text-zinc-600">
+				{dict.home.jwtToolDesc}
+			  </p >
+			</Link>
           </div>
         </section>
 
@@ -185,6 +196,17 @@ export default async function LocalizedHomePage({
                 {dict.home.modbusCrcDesc}
               </p >
             </Link>
+			<Link
+			  href={`/${lang}/modbus-frame`}
+			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+			>
+			  <h3 className="text-xl font-semibold">
+				{dict.home.modbusFrame}
+			  </h3>
+			  <p className="mt-2 text-zinc-600">
+				{dict.home.modbusFrameDesc}
+			  </p >
+			</Link>
           </div>
         </section>
 
