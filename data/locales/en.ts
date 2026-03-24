@@ -30,6 +30,10 @@ export const en = {
 	jwtToolDesc: "Decode JWT tokens into readable JSON.",
 	modbusFrame: "Modbus Frame Builder",
 	modbusFrameDesc: "Build Modbus RTU request frames with CRC.",
+	urlTool: "URL Encoder / Decoder",
+	urlToolDesc: "Encode and decode URL text instantly.",
+	hexAsciiTool: "HEX ↔ ASCII Converter",
+	hexAsciiToolDesc: "Convert between HEX bytes and ASCII text instantly.",
 	comingSoon: "More tools coming soon",
   },
   common: {
@@ -191,5 +195,33 @@ export const en = {
 	  placeholderSlaveId: "e.g. 1",
 	  placeholderAddress: "e.g. 0",
 	  placeholderQuantity: "e.g. 10"
+  },
+  urlTool: {
+	  title: "URL Encoder / Decoder",
+	  subtitle: "Encode plain text for URLs or decode encoded URL text back to normal.",
+	  input: "Input",
+	  output: "Output",
+	  encode: "Encode",
+	  decode: "Decode",
+	  copy: "Copy",
+	  clear: "Clear",
+	  placeholder: "Paste your text here...",
+	  empty: "Nothing to display yet.",
+	  copied: "Copied to clipboard",
+	  invalid: "Invalid URL-encoded input."
+  },
+  hexAsciiTool: {
+	  title: "HEX ↔ ASCII Converter",
+	  subtitle: "Convert between HEX byte strings and ASCII text for debugging and testing.",
+	  input: "Input",
+	  output: "Output",
+	  toHex: "ASCII → HEX",
+	  toAscii: "HEX → ASCII",
+	  copy: "Copy",
+	  clear: "Clear",
+	  placeholder: "Paste HEX or ASCII text here...",
+	  empty: "Nothing to display yet.",
+	  copied: "Copied to clipboard",
+	  invalid: "Invalid HEX input."
   },
 } as const;

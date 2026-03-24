@@ -30,6 +30,10 @@ export const zh = {
 	jwtToolDesc: "解析 JWT Token，查看 Header 和 Payload。",
 	modbusFrame: "Modbus 帧生成器",
 	modbusFrameDesc: "生成带 CRC 的 Modbus RTU 请求帧。",
+	urlTool: "URL 编码 / 解码",
+	urlToolDesc: "即时进行 URL 编码与解码。",
+	hexAsciiTool: "HEX ↔ ASCII 转换器",
+	hexAsciiToolDesc: "即时在 HEX 字节串与 ASCII 文本之间转换。",
 	comingSoon: "更多工具即将上线",
   },
   common: {
@@ -192,4 +196,32 @@ export const zh = {
 	  placeholderAddress: "例如 0",
 	  placeholderQuantity: "例如 10"
 　},
+  urlTool: {
+	  title: "URL 编码 / 解码",
+	  subtitle: "将普通文本编码为 URL 格式，或将已编码文本解码回正常内容。",
+	  input: "输入",
+	  output: "输出结果",
+	  encode: "编码",
+	  decode: "解码",
+	  copy: "复制",
+	  clear: "清空",
+	  placeholder: "在这里粘贴文本……",
+	  empty: "这里还没有内容。",
+	  copied: "已复制到剪贴板",
+	  invalid: "URL 编码输入无效。"
+  },
+  hexAsciiTool: {
+	  title: "HEX ↔ ASCII 转换器",
+	  subtitle: "在 HEX 字节串与 ASCII 文本之间快速转换，适合调试与测试。",
+	  input: "输入",
+	  output: "输出结果",
+	  toHex: "ASCII → HEX",
+	  toAscii: "HEX → ASCII",
+	  copy: "复制",
+	  clear: "清空",
+	  placeholder: "在这里粘贴 HEX 或 ASCII 文本……",
+	  empty: "这里还没有内容。",
+	  copied: "已复制到剪贴板",
+	  invalid: "HEX 输入无效。"
+  },
 } as const;
