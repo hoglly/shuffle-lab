@@ -18,6 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	"/modbus-frame",
 	"/url-encoder",
 	"/hex-ascii",
+	"/hash",
+	"/regex",
   ];
 
   const langs = ["en", "zh"];

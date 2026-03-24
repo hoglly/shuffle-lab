@@ -140,6 +140,28 @@ export default async function LocalizedHomePage({
 				{dict.home.urlToolDesc}
 			  </p >
 			</Link>
+			<Link
+			  href={`/${lang}/hash`}
+			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+			>
+			  <h3 className="text-xl font-semibold">
+				{dict.home.hashTool}
+			  </h3>
+			  <p className="mt-2 text-zinc-600">
+				{dict.home.hashToolDesc}
+			  </p >
+			</Link>
+			<Link
+			  href={`/${lang}/regex`}
+			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+			>
+			  <h3 className="text-xl font-semibold">
+				{dict.home.regexTool}
+			  </h3>
+			  <p className="mt-2 text-zinc-600">
+				{dict.home.regexToolDesc}
+			  </p >
+			</Link>
           </div>
         </section>
 

@@ -34,6 +34,10 @@ export const en = {
 	urlToolDesc: "Encode and decode URL text instantly.",
 	hexAsciiTool: "HEX ↔ ASCII Converter",
 	hexAsciiToolDesc: "Convert between HEX bytes and ASCII text instantly.",
+	hashTool: "Hash Generator",
+	hashToolDesc: "Generate MD5, SHA-1 and SHA-256 hashes instantly.",
+	regexTool: "Regex Tester",
+	regexToolDesc: "Test regular expressions against text instantly.",
 	comingSoon: "More tools coming soon",
   },
   common: {
@@ -223,5 +227,31 @@ export const en = {
 	  empty: "Nothing to display yet.",
 	  copied: "Copied to clipboard",
 	  invalid: "Invalid HEX input."
+  },
+  hashTool: {
+	  title: "Hash Generator",
+	  subtitle: "Generate cryptographic hashes (MD5, SHA-1, SHA-256) for text input.",
+	  input: "Input",
+	  output: "Output",
+	  placeholder: "Enter text here...",
+	  copy: "Copy",
+	  clear: "Clear",
+	  empty: "Nothing to display yet.",
+	  copied: "Copied to clipboard",
+	  generate: "Generate"
+  },
+  regexTool: {
+	  title: "Regex Tester",
+	  subtitle: "Test regular expressions and see matching results instantly.",
+	  pattern: "Pattern",
+	  flags: "Flags",
+	  input: "Test Text",
+	  result: "Matches",
+	  test: "Test",
+	  clear: "Clear",
+	  placeholderPattern: "e.g. \\d+",
+	  placeholderText: "Enter text here...",
+	  noMatch: "No matches found",
+	  invalid: "Invalid regex pattern"
   },
 } as const;

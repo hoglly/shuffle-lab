@@ -34,6 +34,10 @@ export const zh = {
 	urlToolDesc: "即时进行 URL 编码与解码。",
 	hexAsciiTool: "HEX ↔ ASCII 转换器",
 	hexAsciiToolDesc: "即时在 HEX 字节串与 ASCII 文本之间转换。",
+	hashTool: "哈希生成器",
+	hashToolDesc: "即时生成 MD5、SHA-1 和 SHA-256 哈希值。",
+	regexTool: "正则表达式测试器",
+	regexToolDesc: "即时测试正则表达式匹配结果。",
 	comingSoon: "更多工具即将上线",
   },
   common: {
@@ -223,5 +227,31 @@ export const zh = {
 	  empty: "这里还没有内容。",
 	  copied: "已复制到剪贴板",
 	  invalid: "HEX 输入无效。"
+  },
+  hashTool: {
+	  title: "哈希生成器",
+	  subtitle: "为输入文本生成 MD5、SHA-1 和 SHA-256 哈希值。",
+	  input: "输入",
+	  output: "输出结果",
+	  placeholder: "请输入文本...",
+	  copy: "复制",
+	  clear: "清空",
+	  empty: "这里还没有内容。",
+	  copied: "已复制到剪贴板",
+	  generate: "生成"
+  },
+  regexTool: {
+	  title: "正则表达式测试器",
+	  subtitle: "测试正则表达式并查看匹配结果。",
+	  pattern: "正则表达式",
+	  flags: "标志位",
+	  input: "测试文本",
+	  result: "匹配结果",
+	  test: "测试",
+	  clear: "清空",
+	  placeholderPattern: "例如 \\d+",
+	  placeholderText: "请输入测试文本...",
+	  noMatch: "没有匹配结果",
+	  invalid: "正则表达式无效"
   },
 } as const;
