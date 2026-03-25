@@ -47,7 +47,7 @@ export default async function LocalizedHomePage({
           </div>
         </div>
 
-        <header className="mb-14">
+        <header className="mb-16">
           <p className="mb-3 text-sm uppercase tracking-[0.2em] text-zinc-500">
             {dict.site.name}
           </p >
@@ -57,200 +57,102 @@ export default async function LocalizedHomePage({
           <p className="mt-4 text-lg text-zinc-600">{dict.site.subtitle}</p >
         </header>
 
-        <section className="mb-14">
-          <div className="mb-5">
-            <h2 className="text-2xl font-semibold">
-              {dict.home.writingAndText}
-            </h2>
-          </div>
+        <section className="mb-12">
+          <h2 className="mb-4 text-2xl font-semibold">
+            {dict.home.developerTools}
+          </h2>
 
-		  <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2">
-            <Link
-              href={`/${lang}/word-counter`}
-              className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-            >
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <Link href={`/${lang}/json-formatter`} className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm">
+              <h3 className="text-xl font-semibold">{dict.home.jsonFormatter}</h3>
+              <p className="mt-2 text-zinc-600">{dict.home.jsonFormatterDesc}</p >
+            </Link>
+
+            <Link href={`/${lang}/base64`} className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm">
+              <h3 className="text-xl font-semibold">{dict.home.base64Tool}</h3>
+              <p className="mt-2 text-zinc-600">{dict.home.base64ToolDesc}</p >
+            </Link>
+
+            <Link href={`/${lang}/url-encoder`} className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm">
+              <h3 className="text-xl font-semibold">{dict.home.urlTool}</h3>
+              <p className="mt-2 text-zinc-600">{dict.home.urlToolDesc}</p >
+            </Link>
+
+            <Link href={`/${lang}/uuid`} className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm">
+              <h3 className="text-xl font-semibold">{dict.home.uuidTool}</h3>
+              <p className="mt-2 text-zinc-600">{dict.home.uuidToolDesc}</p >
+            </Link>
+
+            <Link href={`/${lang}/jwt`} className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm">
+              <h3 className="text-xl font-semibold">{dict.home.jwtTool}</h3>
+              <p className="mt-2 text-zinc-600">{dict.home.jwtToolDesc}</p >
+            </Link>
+
+            <Link href={`/${lang}/hash`} className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm">
+              <h3 className="text-xl font-semibold">{dict.home.hashTool}</h3>
+              <p className="mt-2 text-zinc-600">{dict.home.hashToolDesc}</p >
+            </Link>
+
+            <Link href={`/${lang}/regex`} className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm">
+              <h3 className="text-xl font-semibold">{dict.home.regexTool}</h3>
+              <p className="mt-2 text-zinc-600">{dict.home.regexToolDesc}</p >
+            </Link>
+
+            <Link href={`/${lang}/timestamp-converter`} className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm">
+              <h3 className="text-xl font-semibold">{dict.home.timestampConverter}</h3>
+              <p className="mt-2 text-zinc-600">{dict.home.timestampConverterDesc}</p >
+            </Link>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="mb-4 text-2xl font-semibold">
+            {dict.home.industrialAndTesting}
+          </h2>
+
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <Link href={`/${lang}/scpi-simulator`} className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm">
+              <h3 className="text-xl font-semibold">{dict.home.scpiSimulator}</h3>
+              <p className="mt-2 text-zinc-600">{dict.home.scpiSimulatorDesc}</p >
+            </Link>
+
+            <Link href={`/${lang}/modbus-crc`} className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm">
+              <h3 className="text-xl font-semibold">{dict.home.modbusCrc}</h3>
+              <p className="mt-2 text-zinc-600">{dict.home.modbusCrcDesc}</p >
+            </Link>
+
+            <Link href={`/${lang}/modbus-frame`} className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm">
+              <h3 className="text-xl font-semibold">{dict.home.modbusFrame}</h3>
+              <p className="mt-2 text-zinc-600">{dict.home.modbusFrameDesc}</p >
+            </Link>
+
+            <Link href={`/${lang}/hex-ascii`} className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm">
+              <h3 className="text-xl font-semibold">{dict.home.hexAsciiTool}</h3>
+              <p className="mt-2 text-zinc-600">{dict.home.hexAsciiToolDesc}</p >
+            </Link>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="mb-4 text-2xl font-semibold">
+            {dict.home.general}
+          </h2>
+
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <Link href={`/${lang}/word-counter`} className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm">
               <h3 className="text-xl font-semibold">{dict.home.wordCounter}</h3>
               <p className="mt-2 text-zinc-600">{dict.home.wordCounterDesc}</p >
             </Link>
 
-            <Link
-              href={`/${lang}/json-formatter`}
-              className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-            >
-              <h3 className="text-xl font-semibold">
-                {dict.home.jsonFormatter}
-              </h3>
-              <p className="mt-2 text-zinc-600">
-                {dict.home.jsonFormatterDesc}
-              </p >
+            <Link href={`/${lang}/currency-converter`} className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm">
+              <h3 className="text-xl font-semibold">{dict.home.currencyConverter}</h3>
+              <p className="mt-2 text-zinc-600">{dict.home.currencyConverterDesc}</p >
             </Link>
 
-            <Link
-              href={`/${lang}/timestamp-converter`}
-              className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-            >
-              <h3 className="text-xl font-semibold">
-                {dict.home.timestampConverter}
-              </h3>
-              <p className="mt-2 text-zinc-600">
-                {dict.home.timestampConverterDesc}
-              </p >
+            <Link href={`/${lang}/excuse-generator`} className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm">
+              <h3 className="text-xl font-semibold">{dict.home.excuseGenerator}</h3>
+              <p className="mt-2 text-zinc-600">{dict.home.excuseGeneratorDesc}</p >
             </Link>
-			<Link
-			  href={`/${lang}/base64`}
-			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-			>
-			  <h3 className="text-xl font-semibold">
-				{dict.home.base64Tool}
-			  </h3>
-			  <p className="mt-2 text-zinc-600">
-				{dict.home.base64ToolDesc}
-			  </p >
-			</Link>
-			<Link
-			  href={`/${lang}/uuid`}
-			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-			>
-			  <h3 className="text-xl font-semibold">
-				{dict.home.uuidTool}
-			  </h3>
-			  <p className="mt-2 text-zinc-600">
-				{dict.home.uuidToolDesc}
-			  </p >
-			</Link>
-			<Link
-			  href={`/${lang}/jwt`}
-			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-			>
-			  <h3 className="text-xl font-semibold">
-				{dict.home.jwtTool}
-			  </h3>
-			  <p className="mt-2 text-zinc-600">
-				{dict.home.jwtToolDesc}
-			  </p >
-			</Link>
-			<Link
-			  href={`/${lang}/url-encoder`}
-			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-			>
-			  <h3 className="text-xl font-semibold">
-				{dict.home.urlTool}
-			  </h3>
-			  <p className="mt-2 text-zinc-600">
-				{dict.home.urlToolDesc}
-			  </p >
-			</Link>
-			<Link
-			  href={`/${lang}/hash`}
-			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-			>
-			  <h3 className="text-xl font-semibold">
-				{dict.home.hashTool}
-			  </h3>
-			  <p className="mt-2 text-zinc-600">
-				{dict.home.hashToolDesc}
-			  </p >
-			</Link>
-			<Link
-			  href={`/${lang}/regex`}
-			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-			>
-			  <h3 className="text-xl font-semibold">
-				{dict.home.regexTool}
-			  </h3>
-			  <p className="mt-2 text-zinc-600">
-				{dict.home.regexToolDesc}
-			  </p >
-			</Link>
-          </div>
-        </section>
-
-        <section className="mb-14">
-          <div className="mb-5">
-            <h2 className="text-2xl font-semibold">
-              {dict.home.everydayUtilities}
-            </h2>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Link
-              href={`/${lang}/currency-converter`}
-              className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-            >
-              <h3 className="text-xl font-semibold">
-                {dict.home.currencyConverter}
-              </h3>
-              <p className="mt-2 text-zinc-600">
-                {dict.home.currencyConverterDesc}
-              </p >
-            </Link>
-
-            <Link
-              href={`/${lang}/excuse-generator`}
-              className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-            >
-              <h3 className="text-xl font-semibold">
-                {dict.home.excuseGenerator}
-              </h3>
-              <p className="mt-2 text-zinc-600">
-                {dict.home.excuseGeneratorDesc}
-              </p >
-            </Link>
-          </div>
-        </section>
-
-        <section className="mb-14">
-          <div className="mb-5">
-            <h2 className="text-2xl font-semibold">
-              {dict.home.industrialAndTesting}
-            </h2>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Link
-              href={`/${lang}/scpi-simulator`}
-              className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-            >
-              <h3 className="text-xl font-semibold">
-                {dict.home.scpiSimulator}
-              </h3>
-              <p className="mt-2 text-zinc-600">
-                {dict.home.scpiSimulatorDesc}
-              </p >
-            </Link>
-			
-			<Link href={`/${lang}/modbus-crc`}
-              className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-            >
-              <h3 className="text-xl font-semibold">
-                {dict.home.modbusCrc}
-              </h3>
-              <p className="mt-2 text-zinc-600">
-                {dict.home.modbusCrcDesc}
-              </p >
-            </Link>
-			<Link
-			  href={`/${lang}/modbus-frame`}
-			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-			>
-			  <h3 className="text-xl font-semibold">
-				{dict.home.modbusFrame}
-			  </h3>
-			  <p className="mt-2 text-zinc-600">
-				{dict.home.modbusFrameDesc}
-			  </p >
-			</Link>
-			<Link
-			  href={`/${lang}/hex-ascii`}
-			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
-			>
-			  <h3 className="text-xl font-semibold">
-				{dict.home.hexAsciiTool}
-			  </h3>
-			  <p className="mt-2 text-zinc-600">
-				{dict.home.hexAsciiToolDesc}
-			  </p >
-			</Link>
           </div>
         </section>
 
