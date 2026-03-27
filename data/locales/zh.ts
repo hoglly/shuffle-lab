@@ -53,6 +53,12 @@ export const zh = {
 
     regexTool: "正则表达式测试器",
     regexToolDesc: "即时测试正则表达式匹配结果",
+	
+	httpStatusTool: "HTTP 状态码查询",
+	httpStatusToolDesc: "查询 HTTP 状态码及其含义",
+	
+	diffTool: "文本对比工具",
+	diffToolDesc: "对比两段文本并找出不同",
 
     comingSoon: "更多工具即将上线",
   },
@@ -270,4 +276,24 @@ export const zh = {
     noMatch: "没有匹配结果",
     invalid: "正则表达式无效",
   },
+  httpStatusTool: {
+	  title: "HTTP 状态码查询",
+	  subtitle: "查询 HTTP 状态码的含义",
+	  input: "状态码",
+	  result: "结果",
+	  placeholder: "输入例如 404",
+	  lookup: "查询",
+	  clear: "清空",
+	  notFound: "未找到该状态码",
+  },
+  diffTool: {
+	  title: "文本对比工具",
+	  subtitle: "对比两段文本并找出差异",
+	  inputA: "文本 A",
+	  inputB: "文本 B",
+	  result: "差异结果",
+	  compare: "对比",
+	  clear: "清空",
+	  noDiff: "没有发现差异",
+  }
 } as const;

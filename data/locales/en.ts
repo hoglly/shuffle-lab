@@ -53,6 +53,12 @@ export const en = {
 
     regexTool: "Regex Tester",
     regexToolDesc: "Test regular expressions on text",
+	
+	httpStatusTool: "HTTP Status Lookup",
+	httpStatusToolDesc: "Look up HTTP status codes and their meanings",
+	
+	diffTool: "Text Diff Checker",
+	diffToolDesc: "Compare two texts and find differences",
 
     comingSoon: "More tools coming soon",
   },
@@ -286,4 +292,26 @@ export const en = {
     noMatch: "No matches found",
     invalid: "Invalid regex pattern",
   },
+  
+  httpStatusTool: {
+	  title: "HTTP Status Lookup",
+	  subtitle: "Find the meaning of HTTP status codes",
+	  input: "Status Code",
+	  result: "Result",
+	  placeholder: "Enter code like 404",
+	  lookup: "Lookup",
+	  clear: "Clear",
+	  notFound: "Status code not found",
+  },
+  
+  diffTool: {
+	  title: "Text Diff Checker",
+	  subtitle: "Compare two texts and highlight differences",
+	  inputA: "Text A",
+	  inputB: "Text B",
+	  result: "Differences",
+	  compare: "Compare",
+	  clear: "Clear",
+	  noDiff: "No differences found",
+  }
 } as const;

@@ -20,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	"/hex-ascii",
 	"/hash",
 	"/regex",
+	"/http-status",
+	"/diff",
   ];
 
   const langs = ["en", "zh"];

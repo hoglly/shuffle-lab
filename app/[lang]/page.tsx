@@ -102,6 +102,33 @@ export default async function LocalizedHomePage({
               <h3 className="text-xl font-semibold">{dict.home.timestampConverter}</h3>
               <p className="mt-2 text-zinc-600">{dict.home.timestampConverterDesc}</p >
             </Link>
+			
+			<Link
+			  href={`/${lang}/http-status`}
+			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+			>
+			  <h3 className="text-xl font-semibold">
+				{dict.home.httpStatusTool}
+			  </h3>
+			  <p className="mt-2 text-zinc-600">
+				{dict.home.httpStatusToolDesc}
+			  </p >
+			</Link>
+			
+			<Link
+			  href={`/${lang}/diff`}
+			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+			>
+			  <h3 className="text-xl font-semibold">
+				{dict.home.diffTool}
+			  </h3>
+			  <p className="mt-2 text-zinc-600">
+				{dict.home.diffToolDesc}
+			  </p >
+			</Link>
+			
+			
+			
           </div>
         </section>
 
