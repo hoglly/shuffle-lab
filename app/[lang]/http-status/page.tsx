@@ -69,7 +69,11 @@ export default function HttpStatusPage({
   const dict = getDictionary(lang);
 
   const [code, setCode] = useState("");
-  const [result, setResult] = useState<{ title: string; desc: string } | null>(null);
+  const [result, setResult] = useState<{
+    title: string;
+    descEn: string;
+    descZh: string;
+  } | null>(null);
   const [error, setError] = useState("");
 
   function handleLookup() {
@@ -100,37 +104,43 @@ export default function HttpStatusPage({
   return (
     <main className="min-h-screen bg-white text-zinc-900">
       <div className="mx-auto max-w-4xl px-6 py-16">
-
-        {/* 顶部 */}
         <div className="mb-8 flex items-center justify-between">
           <Link href={`/${lang}`} className="text-sm text-zinc-500">
             ← {dict.common.backToHome}
           </Link>
 
           <div className="flex gap-2 text-sm">
-            <Link href="/en/http-status" className={`px-3 py-1 rounded-md ${lang==="en"?"bg-black text-white":"border"}`}>
+            <Link
+              href="/en/http-status"
+              className={`px-3 py-1 rounded-md ${
+                lang === "en" ? "bg-black text-white" : "border"
+              }`}
+            >
               EN
             </Link>
-            <Link href="/zh/http-status" className={`px-3 py-1 rounded-md ${lang==="zh"?"bg-black text-white":"border"}`}>
+            <Link
+              href="/zh/http-status"
+              className={`px-3 py-1 rounded-md ${
+                lang === "zh" ? "bg-black text-white" : "border"
+              }`}
+            >
               中文
             </Link>
           </div>
         </div>
 
-        {/* 标题 */}
         <header className="mb-8">
           <p className="text-sm text-zinc-500 mb-2">Shuffle Lab</p >
           <h1 className="text-4xl font-bold">{dict.httpStatusTool.title}</h1>
           <p className="text-zinc-600 mt-2">{dict.httpStatusTool.subtitle}</p >
         </header>
 
-        {/* 输入 */}
         <div className="flex gap-3 mb-6">
           <input
             value={code}
             onChange={(e) => {
               setCode(e.target.value);
-              setResult(null);   // ⭐ 修复“旧结果残留”
+              setResult(null);
               setError("");
             }}
             placeholder={dict.httpStatusTool.placeholder}
@@ -152,7 +162,6 @@ export default function HttpStatusPage({
           </button>
         </div>
 
-        {/* 输出 */}
         <div className="border rounded-2xl p-4 min-h-[100px]">
           {error && <p className="text-red-500">{error}</p >}
 
@@ -162,12 +171,11 @@ export default function HttpStatusPage({
                 {Number(code)} {result.title}
               </p >
               <p className="text-zinc-600 mt-2">
-				  {lang === "zh" ? result.descZh : result.descEn}
-			  </p >
+                {lang === "zh" ? result.descZh : result.descEn}
+              </p >
             </div>
           )}
         </div>
-
       </div>
     </main>
   );
