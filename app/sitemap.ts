@@ -22,6 +22,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	"/regex",
 	"/http-status",
 	"/diff",
+	"/http-status/404",
+	"/http-status/500",
+	"/http-status/403",
   ];
 
   const langs = ["en", "zh"];

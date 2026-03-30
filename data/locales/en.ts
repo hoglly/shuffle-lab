@@ -313,5 +313,71 @@ export const en = {
 	  compare: "Compare",
 	  clear: "Clear",
 	  noDiff: "No differences found",
-  }
+  },
+  
+  httpStatusPages: {
+	  "404": {
+		title: "404 Not Found",
+		subtitle: "What it means, why it happens, and how to fix it",
+		whatIsTitle: "What is 404 Not Found",
+		whatIsBody:
+		  "404 Not Found means the server cannot find the page or resource you requested. The URL may be wrong, the page may have been removed, or the link may be outdated.",
+		whyTitle: "Why it happens",
+		whyBody:
+		  "Common reasons include a mistyped URL, a deleted page, a broken internal link, or a resource that was moved without a proper redirect.",
+		fixTitle: "How to fix it",
+		fixBody:
+		  "Check the URL for mistakes, refresh the page, go back to the previous page, or visit the homepage. If you manage the site, add a redirect or restore the missing resource.",
+		exampleTitle: "Example",
+		exampleBody:
+		  "If you open a link like /old-page but that page no longer exists, the server may return 404 Not Found.",
+		relatedTitle: "Try the lookup tool",
+		relatedBody:
+		  "You can also use the HTTP Status Lookup tool to check other status codes.",
+		openTool: "Open HTTP Status Lookup",
+	  },
+
+	  "500": {
+		title: "500 Internal Server Error",
+		subtitle: "What it means, why it happens, and how to fix it",
+		whatIsTitle: "What is 500 Internal Server Error",
+		whatIsBody:
+		  "500 Internal Server Error means something went wrong on the server side while processing the request. The server received the request, but it could not complete it successfully.",
+		whyTitle: "Why it happens",
+		whyBody:
+		  "Common reasons include server bugs, misconfigured code, database failures, missing environment variables, or temporary overload on the server.",
+		fixTitle: "How to fix it",
+		fixBody:
+		  "Refresh the page and try again later. If the issue continues, the problem usually needs to be fixed by the website owner or backend developer.",
+		exampleTitle: "Example",
+		exampleBody:
+		  "A server crashes while processing your request or fails to connect to the database, and returns a 500 error instead of a valid response.",
+		relatedTitle: "Try the lookup tool",
+		relatedBody:
+		  "You can also use the HTTP Status Lookup tool to check other status codes.",
+		openTool: "Open HTTP Status Lookup",
+	  },
+
+	  "403": {
+		title: "403 Forbidden",
+		subtitle: "What it means, why it happens, and how to fix it",
+		whatIsTitle: "What is 403 Forbidden",
+		whatIsBody:
+		  "403 Forbidden means the server understands your request but refuses to allow access. Unlike 404, the resource may exist, but you are not allowed to open it.",
+		whyTitle: "Why it happens",
+		whyBody:
+		  "This often happens because of missing permissions, authentication problems, blocked IP addresses, or restricted files and directories.",
+		fixTitle: "How to fix it",
+		fixBody:
+		  "Check whether you are logged in, make sure you have the correct permissions, and contact the website owner if necessary.",
+		exampleTitle: "Example",
+		exampleBody:
+		  "Trying to access a restricted admin page, private file, or blocked directory without permission may result in a 403 error.",
+		relatedTitle: "Try the lookup tool",
+		relatedBody:
+		  "You can also use the HTTP Status Lookup tool to check other status codes.",
+		openTool: "Open HTTP Status Lookup",
+	  },
+  },
+  
 } as const;

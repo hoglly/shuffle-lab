@@ -295,5 +295,66 @@ export const zh = {
 	  compare: "对比",
 	  clear: "清空",
 	  noDiff: "没有发现差异",
-  }
+  },
+  httpStatusPages: {
+	  "404": {
+		title: "404 Not Found",
+		subtitle: "它是什么意思、为什么会出现、以及如何处理",
+		whatIsTitle: "什么是 404 Not Found",
+		whatIsBody:
+		  "404 Not Found 表示服务器找不到你请求的页面或资源。可能是 URL 写错了，页面被删除了，或者链接已经过期。",
+		whyTitle: "为什么会出现",
+		whyBody:
+		  "常见原因包括：网址输入错误、页面被删除、站内链接失效，或者资源被移动但没有正确设置跳转。",
+		fixTitle: "如何处理",
+		fixBody:
+		  "先检查网址是否正确，再尝试刷新页面、返回上一页，或者回到网站首页。如果你是站点管理者，可以添加重定向或恢复缺失资源。",
+		exampleTitle: "示例",
+		exampleBody:
+		  "例如你访问 /old-page，但这个页面已经不存在了，服务器就可能返回 404 Not Found。",
+		relatedTitle: "试试查询工具",
+		relatedBody: "你也可以使用 HTTP 状态码查询工具查看其他状态码。",
+		openTool: "打开 HTTP 状态码查询",
+	  },
+
+	  "500": {
+		title: "500 Internal Server Error",
+		subtitle: "它是什么意思、为什么会出现、以及如何处理",
+		whatIsTitle: "什么是 500 Internal Server Error",
+		whatIsBody:
+		  "500 Internal Server Error 表示服务器在处理请求时发生了内部错误。服务器收到了请求，但无法正常完成处理。",
+		whyTitle: "为什么会出现",
+		whyBody:
+		  "常见原因包括：程序错误、服务器配置问题、数据库连接失败、环境变量缺失，或者服务器暂时过载。",
+		fixTitle: "如何处理",
+		fixBody:
+		  "可以先刷新页面或稍后再试。如果问题持续出现，通常需要网站管理员或后端开发者修复服务器问题。",
+		exampleTitle: "示例",
+		exampleBody:
+		  "例如服务器在处理请求时崩溃，或者访问数据库失败，就可能返回 500 错误。",
+		relatedTitle: "试试查询工具",
+		relatedBody: "你也可以使用 HTTP 状态码查询工具查看其他状态码。",
+		openTool: "打开 HTTP 状态码查询",
+	  },
+
+	  "403": {
+		title: "403 Forbidden",
+		subtitle: "它是什么意思、为什么会出现、以及如何处理",
+		whatIsTitle: "什么是 403 Forbidden",
+		whatIsBody:
+		  "403 Forbidden 表示服务器理解了请求，但拒绝提供访问权限。与 404 不同，资源可能是存在的，只是你没有权限访问。",
+		whyTitle: "为什么会出现",
+		whyBody:
+		  "常见原因包括：权限不足、未正确登录、IP 被限制，或者访问了受保护的文件和目录。",
+		fixTitle: "如何处理",
+		fixBody:
+		  "请检查自己是否已经登录、是否有访问权限，必要时联系网站管理员处理。",
+		exampleTitle: "示例",
+		exampleBody:
+		  "例如访问需要权限的后台页面、私有文件或受限目录时，就可能出现 403 错误。",
+		relatedTitle: "试试查询工具",
+		relatedBody: "你也可以使用 HTTP 状态码查询工具查看其他状态码。",
+		openTool: "打开 HTTP 状态码查询",
+	  },
+  },
 } as const;
