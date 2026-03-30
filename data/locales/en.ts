@@ -147,24 +147,6 @@ export const en = {
     result: "Result",
   },
 
-  scpiSimulator: {
-    title: "SCPI Simulator",
-    subtitle: "Simulate SCPI commands in the browser",
-    command: "Command",
-    commandPlaceholder: "Enter a SCPI command, e.g. *IDN?",
-    response: "Response",
-    mapping: "Command Mapping",
-    mappingDesc: "Edit JSON to customize responses",
-    send: "Send",
-    clear: "Clear",
-    copy: "Copy Response",
-    reset: "Reset",
-    notFound: "ERROR: Command not recognized",
-    invalidJson: "Invalid JSON mapping",
-    copySuccess: "Copied to clipboard",
-    mappingPlaceholder: "Edit command-response pairs here...",
-  },
-
   base64Tool: {
     title: "Base64 Encoder / Decoder",
     subtitle: "Encode text to Base64 or decode Base64 to text",
@@ -379,5 +361,24 @@ export const en = {
 		openTool: "Open HTTP Status Lookup",
 	  },
   },
+  
+  scpiSimulator: {
+  title: "SCPI Simulator & Runner",
+  subtitle: "Run one or more SCPI commands and simulate instrument responses in the browser",
+  command: "Commands",
+  commandPlaceholder: "Enter a SCPI command, e.g. *IDN?",
+  response: "Response",
+  mapping: "Command Mapping",
+  mappingDesc: "Edit the JSON map to customize command responses",
+  send: "Send",
+  clear: "Clear",
+  copy: "Copy Response",
+  reset: "Reset Preset",
+  notFound: "ERROR: Command not recognized",
+  invalidJson: "Invalid JSON mapping",
+  copySuccess: "Response copied to clipboard",
+  mappingPlaceholder: "Edit command-response pairs here..."
+},
+  
   
 } as const;

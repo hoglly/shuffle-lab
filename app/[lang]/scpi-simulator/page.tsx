@@ -6,6 +6,8 @@ import { getDictionary } from "@/lib/i18n";
 
 const defaultMappingObject = {
   "*IDN?": "TH2832,LCR METER,123456,1.0.0",
+  "*RST": "OK",
+  "CONF:VOLT": "OK",
   "FETCh?": "1.234E-3",
   "MEAS:VOLT?": "12.34",
   "MEAS:CURR?": "0.056",
@@ -16,12 +18,23 @@ const defaultMappingObject = {
 
 const defaultMappingJson = JSON.stringify(defaultMappingObject, null, 2);
 
+const defaultCommandExample = `*RST
+CONF:VOLT
+MEAS:VOLT?
+FETCh?
+SYST:ERR?`;
+
 function normalizeScpiKey(value: string) {
   return value
     .trim()
     .replace(/^["']|["']$/g, "")
     .toUpperCase();
 }
+
+type LogItem = {
+  command: string;
+  response: string;
+};
 
 export default function ScpiSimulatorPage({
   params,
@@ -31,8 +44,8 @@ export default function ScpiSimulatorPage({
   const { lang } = use(params);
   const dict = getDictionary(lang);
 
-  const [command, setCommand] = useState("");
-  const [response, setResponse] = useState("");
+  const [commandInput, setCommandInput] = useState("");
+  const [logItems, setLogItems] = useState<LogItem[]>([]);
   const [message, setMessage] = useState("");
   const [mappingText, setMappingText] = useState(defaultMappingJson);
 
@@ -56,36 +69,42 @@ export default function ScpiSimulatorPage({
     }
   }, [mappingText]);
 
-  function handleSend() {
+  function handleRun() {
     if (!parsedMapping.valid || !parsedMapping.data) {
-      setResponse("");
+      setLogItems([]);
       setMessage(dict.scpiSimulator.invalidJson);
       return;
     }
 
-    const normalizedCommand = normalizeScpiKey(command);
+    const lines = commandInput
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean);
 
-    if (!normalizedCommand) {
-      setResponse("");
+    if (lines.length === 0) {
+      setLogItems([]);
       setMessage("");
       return;
     }
 
-    const result = parsedMapping.data[normalizedCommand];
+    const results: LogItem[] = lines.map((line) => {
+      const normalizedCommand = normalizeScpiKey(line);
+      const result = parsedMapping.data?.[normalizedCommand];
 
-    if (result === undefined) {
-      setResponse(dict.scpiSimulator.notFound);
-      setMessage("");
-      return;
-    }
+      return {
+        command: line,
+        response:
+          result === undefined ? dict.scpiSimulator.notFound : result,
+      };
+    });
 
-    setResponse(result);
+    setLogItems(results);
     setMessage("");
   }
 
-  function handleClear() {
-    setCommand("");
-    setResponse("");
+  function handleClearCommands() {
+    setCommandInput("");
+    setLogItems([]);
     setMessage("");
   }
 
@@ -94,9 +113,20 @@ export default function ScpiSimulatorPage({
     setMessage("");
   }
 
-  async function handleCopy() {
-    if (!response) return;
-    await navigator.clipboard.writeText(response);
+  function handleLoadExample() {
+    setCommandInput(defaultCommandExample);
+    setLogItems([]);
+    setMessage("");
+  }
+
+  async function handleCopyLog() {
+    if (logItems.length === 0) return;
+
+    const text = logItems
+      .map((item) => `> ${item.command}\n${item.response}`)
+      .join("\n\n");
+
+    await navigator.clipboard.writeText(text);
     setMessage(dict.scpiSimulator.copySuccess);
   }
 
@@ -151,31 +181,41 @@ export default function ScpiSimulatorPage({
               {dict.scpiSimulator.command}
             </label>
 
-            <input
-              type="text"
-              value={command}
-              onChange={(e) => setCommand(e.target.value)}
-              placeholder={dict.scpiSimulator.commandPlaceholder}
-              className="w-full rounded-xl border border-zinc-200 px-4 py-3 font-mono outline-none transition focus:border-zinc-400"
+            <textarea
+              value={commandInput}
+              onChange={(e) => setCommandInput(e.target.value)}
+              placeholder={
+                lang === "zh"
+                  ? "输入一条或多条 SCPI 命令，每行一条"
+                  : "Enter one or more SCPI commands, one per line"
+              }
+              className="min-h-[220px] w-full rounded-2xl border border-zinc-200 p-4 font-mono text-sm outline-none transition focus:border-zinc-400"
             />
 
             <div className="mt-4 flex flex-wrap gap-3">
               <button
-                onClick={handleSend}
+                onClick={handleRun}
                 className="rounded-xl bg-black px-5 py-3 text-white hover:bg-zinc-800"
               >
-                {dict.scpiSimulator.send}
+                {lang === "zh" ? "运行" : "Run"}
               </button>
 
               <button
-                onClick={handleCopy}
+                onClick={handleLoadExample}
+                className="rounded-xl border border-zinc-300 px-5 py-3 hover:bg-zinc-50"
+              >
+                {lang === "zh" ? "加载示例" : "Load Example"}
+              </button>
+
+              <button
+                onClick={handleCopyLog}
                 className="rounded-xl border border-zinc-300 px-5 py-3 hover:bg-zinc-50"
               >
                 {dict.scpiSimulator.copy}
               </button>
 
               <button
-                onClick={handleClear}
+                onClick={handleClearCommands}
                 className="rounded-xl border border-zinc-300 px-5 py-3 hover:bg-zinc-50"
               >
                 {dict.scpiSimulator.clear}
@@ -184,13 +224,29 @@ export default function ScpiSimulatorPage({
 
             <div className="mt-6 rounded-2xl border border-zinc-200 p-5">
               <p className="text-sm text-zinc-500">
-                {dict.scpiSimulator.response}
+                {lang === "zh" ? "运行日志" : "Execution Log"}
               </p >
-              <textarea
-                value={response}
-                readOnly
-                className="mt-3 min-h-[180px] w-full rounded-xl border border-zinc-200 p-4 font-mono text-sm outline-none"
-              />
+
+              <div className="mt-3 min-h-[260px] max-h-[420px] overflow-x-auto overflow-y-auto rounded-xl border border-zinc-200 p-4 font-mono text-sm">
+                {logItems.length === 0 ? (
+                  <p className="text-zinc-400">
+                    {lang === "zh"
+                      ? "运行后会在这里显示命令和返回结果"
+                      : "Commands and responses will appear here after running"}
+                  </p >
+                ) : (
+                  <div className="space-y-4">
+                    {logItems.map((item, index) => (
+                      <div key={`${item.command}-${index}`}>
+                        <div className="text-zinc-500">{`> ${item.command}`}</div>
+                        <div className="mt-1 whitespace-pre-wrap break-words">
+                          {item.response}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </section>
 
@@ -208,7 +264,7 @@ export default function ScpiSimulatorPage({
               value={mappingText}
               onChange={(e) => setMappingText(e.target.value)}
               placeholder={dict.scpiSimulator.mappingPlaceholder}
-              className="min-h-[320px] w-full rounded-xl border border-zinc-200 p-4 font-mono text-sm outline-none transition focus:border-zinc-400"
+              className="min-h-[420px] w-full rounded-2xl border border-zinc-200 p-4 font-mono text-sm outline-none transition focus:border-zinc-400"
             />
 
             <div className="mt-4 flex gap-3">

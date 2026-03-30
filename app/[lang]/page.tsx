@@ -180,6 +180,7 @@ export default async function LocalizedHomePage({
               <h3 className="text-xl font-semibold">{dict.home.excuseGenerator}</h3>
               <p className="mt-2 text-zinc-600">{dict.home.excuseGeneratorDesc}</p >
             </Link>
+			
           </div>
         </section>
 
