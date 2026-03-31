@@ -25,6 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	"/http-status/404",
 	"/http-status/500",
 	"/http-status/403",
+	"/modbus-exception",
+	"/modbus-response",
   ];
 
   const langs = ["en", "zh"];

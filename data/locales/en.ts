@@ -59,6 +59,12 @@ export const en = {
 	
 	diffTool: "Text Diff Checker",
 	diffToolDesc: "Compare two texts and find differences",
+	
+	modbusExceptionTool: "Modbus Exception Decoder",
+	modbusExceptionToolDesc: "Decode Modbus exception responses and error meanings",
+	
+	modbusResponseTool: "Modbus Response Parser",
+	modbusResponseToolDesc: "Parse Modbus RTU response frames and decode register values",
 
     comingSoon: "More tools coming soon",
   },
@@ -363,22 +369,65 @@ export const en = {
   },
   
   scpiSimulator: {
-  title: "SCPI Simulator & Runner",
-  subtitle: "Run one or more SCPI commands and simulate instrument responses in the browser",
-  command: "Commands",
-  commandPlaceholder: "Enter a SCPI command, e.g. *IDN?",
-  response: "Response",
-  mapping: "Command Mapping",
-  mappingDesc: "Edit the JSON map to customize command responses",
-  send: "Send",
-  clear: "Clear",
-  copy: "Copy Response",
-  reset: "Reset Preset",
-  notFound: "ERROR: Command not recognized",
-  invalidJson: "Invalid JSON mapping",
-  copySuccess: "Response copied to clipboard",
-  mappingPlaceholder: "Edit command-response pairs here..."
-},
+	  title: "SCPI Simulator & Runner",
+	  subtitle: "Run one or more SCPI commands and simulate instrument responses in the browser",
+	  command: "Commands",
+	  commandPlaceholder: "Enter a SCPI command, e.g. *IDN?",
+	  response: "Response",
+	  mapping: "Command Mapping",
+	  mappingDesc: "Edit the JSON map to customize command responses",
+	  send: "Send",
+	  clear: "Clear",
+	  copy: "Copy Response",
+	  reset: "Reset Preset",
+	  notFound: "ERROR: Command not recognized",
+	  invalidJson: "Invalid JSON mapping",
+	  copySuccess: "Response copied to clipboard",
+	  mappingPlaceholder: "Edit command-response pairs here..."
+  },
   
+  modbusExceptionTool: {
   
+  	  title: "Modbus Exception Decoder",
+	  subtitle: "Decode Modbus exception frames and understand error meanings",
+	  input: "Exception Frame",
+	  output: "Decoded Result",
+	  placeholder: "e.g. 01 83 02 C0 F1",
+	  decode: "Decode",
+	  clear: "Clear",
+	  copy: "Copy",
+	  invalid: "Invalid Modbus exception frame",
+	  copied: "Copied to clipboard",
+	  slaveId: "Slave ID",
+	  functionCode: "Function Code",
+	  exceptionCode: "Exception Code",
+	  meaning: "Meaning",
+	  crc: "CRC Check",
+	  ok: "OK",
+	  failed: "Failed",
+	  unknown: "Unknown exception code"
+  },
+  
+  modbusResponseTool: {
+	  title: "Modbus Response Parser",
+	  subtitle: "Parse Modbus RTU response frames and decode returned data",
+	  input: "Response Frame",
+	  output: "Parsed Result",
+	  placeholder: "e.g. 01 03 02 00 0A C4 0B",
+	  parse: "Parse",
+	  clear: "Clear",
+	  copy: "Copy",
+	  invalid: "Invalid Modbus response frame",
+	  copied: "Copied to clipboard",
+	  slaveId: "Slave ID",
+	  functionCode: "Function Code",
+	  byteCount: "Byte Count",
+	  dataBytes: "Data Bytes",
+	  registers: "Register Values",
+	  crc: "CRC Check",
+	  ok: "OK",
+	  failed: "Failed",
+	  unsupported: "Unsupported function code for this parser"
+  },
+
 } as const;

@@ -59,6 +59,12 @@ export const zh = {
 	
 	diffTool: "文本对比工具",
 	diffToolDesc: "对比两段文本并找出不同",
+	
+	modbusExceptionTool: "Modbus 异常响应解析器",
+	modbusExceptionToolDesc: "解析 Modbus 异常帧并显示错误含义",
+	
+	modbusResponseTool: "Modbus 响应解析器",
+	modbusResponseToolDesc: "解析 Modbus RTU 响应帧并显示寄存器数值",
 
     comingSoon: "更多工具即将上线",
   },
@@ -356,6 +362,49 @@ export const zh = {
 		relatedBody: "你也可以使用 HTTP 状态码查询工具查看其他状态码。",
 		openTool: "打开 HTTP 状态码查询",
 	  },
+  },
+  
+  modbusExceptionTool: {
+	  title: "Modbus 异常响应解析器",
+	  subtitle: "解析 Modbus 异常帧并查看错误含义",
+	  input: "异常响应帧",
+	  output: "解析结果",
+	  placeholder: "例如 01 83 02 C0 F1",
+	  decode: "解析",
+	  clear: "清空",
+	  copy: "复制",
+	  invalid: "无效的 Modbus 异常响应帧",
+	  copied: "已复制到剪贴板",
+	  slaveId: "从站地址",
+	  functionCode: "功能码",
+	  exceptionCode: "异常码",
+	  meaning: "含义",
+	  crc: "CRC 校验",
+	  ok: "正确",
+	  failed: "错误",
+	  unknown: "未知异常码"
+  },
+  
+  modbusResponseTool: {
+	  title: "Modbus 响应解析器",
+	  subtitle: "解析 Modbus RTU 响应帧并显示返回数据",
+	  input: "响应帧",
+	  output: "解析结果",
+	  placeholder: "例如 01 03 02 00 0A C4 0B",
+	  parse: "解析",
+	  clear: "清空",
+	  copy: "复制",
+	  invalid: "无效的 Modbus 响应帧",
+	  copied: "已复制到剪贴板",
+	  slaveId: "从站地址",
+	  functionCode: "功能码",
+	  byteCount: "字节数",
+	  dataBytes: "数据字节",
+	  registers: "寄存器数值",
+	  crc: "CRC 校验",
+	  ok: "正确",
+	  failed: "错误",
+	  unsupported: "当前解析器暂不支持该功能码"
   },
 
 } as const;

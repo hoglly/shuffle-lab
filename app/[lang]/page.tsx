@@ -157,6 +157,30 @@ export default async function LocalizedHomePage({
               <h3 className="text-xl font-semibold">{dict.home.hexAsciiTool}</h3>
               <p className="mt-2 text-zinc-600">{dict.home.hexAsciiToolDesc}</p >
             </Link>
+			
+			<Link
+			  href={`/${lang}/modbus-exception`}
+			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+			>
+			  <h3 className="text-xl font-semibold">
+				{dict.home.modbusExceptionTool}
+			  </h3>
+			  <p className="mt-2 text-zinc-600">
+				{dict.home.modbusExceptionToolDesc}
+			  </p >
+			</Link>
+			
+			<Link
+			  href={`/${lang}/modbus-response`}
+			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+			>
+			  <h3 className="text-xl font-semibold">
+				{dict.home.modbusResponseTool}
+			  </h3>
+			  <p className="mt-2 text-zinc-600">
+				{dict.home.modbusResponseToolDesc}
+			  </p >
+			</Link>
           </div>
         </section>
 
