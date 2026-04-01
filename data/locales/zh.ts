@@ -111,6 +111,10 @@ export const zh = {
     unavailable: "当前无法获取汇率数据",
     swap: "交换",
     amountPlaceholder: "输入金额",
+	searchCurrency: "搜索货币",
+	popularCurrencies: "常用货币",
+	allCurrencies: "全部货币",
+	selectCurrency: "选择货币",
   },
   jsonFormatter: {
     title: "JSON 格式化工具",

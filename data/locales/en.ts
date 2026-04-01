@@ -115,6 +115,10 @@ export const en = {
     unavailable: "Exchange rates unavailable",
     swap: "Swap",
     amountPlaceholder: "Enter amount",
+	searchCurrency: "Search currency",
+	popularCurrencies: "Popular currencies",
+	allCurrencies: "All currencies",
+	selectCurrency: "Select currency",
   },
 
   jsonFormatter: {
