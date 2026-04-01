@@ -597,7 +597,7 @@ export default function CurrencyConverterPage({
 
                 {statusMessage && (
                   <p>
-                    <span className="text-zinc-500">Status:</span>{" "}
+                    <span className="text-zinc-500">{dict.currencyConverter.status}:</span>{" "}
                     {statusMessage}
                   </p >
                 )}

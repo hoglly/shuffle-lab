@@ -115,6 +115,7 @@ export const zh = {
 	popularCurrencies: "常用货币",
 	allCurrencies: "全部货币",
 	selectCurrency: "选择货币",
+	status: "状态",
   },
   jsonFormatter: {
     title: "JSON 格式化工具",

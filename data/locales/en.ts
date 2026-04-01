@@ -119,6 +119,7 @@ export const en = {
 	popularCurrencies: "Popular currencies",
 	allCurrencies: "All currencies",
 	selectCurrency: "Select currency",
+	status: "Status",
   },
 
   jsonFormatter: {
