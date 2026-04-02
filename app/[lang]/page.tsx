@@ -127,6 +127,18 @@ export default async function LocalizedHomePage({
 			  </p >
 			</Link>
 			
+			<Link
+			  href={`/${lang}/json-to-csv`}
+			  className="rounded-2xl border border-zinc-200 p-6 transition hover:border-zinc-400 hover:shadow-sm"
+			>
+			  <h3 className="text-xl font-semibold">
+				{dict.home.jsonToCsvTool}
+			  </h3>
+			  <p className="mt-2 text-zinc-600">
+				{dict.home.jsonToCsvToolDesc}
+			  </p >
+			</Link>
+			
 			
 			
           </div>

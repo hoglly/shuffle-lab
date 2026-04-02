@@ -65,6 +65,9 @@ export const en = {
 	
 	modbusResponseTool: "Modbus Response Parser",
 	modbusResponseToolDesc: "Parse Modbus RTU response frames and decode register values",
+	
+	jsonToCsvTool: "JSON to CSV Converter",
+	jsonToCsvToolDesc: "Convert JSON arrays into CSV instantly",
 
     comingSoon: "More tools coming soon",
   },
@@ -433,6 +436,22 @@ export const en = {
 	  ok: "OK",
 	  failed: "Failed",
 	  unsupported: "Unsupported function code for this parser"
+  },
+  
+  jsonToCsvTool: {
+	  title: "JSON to CSV Converter",
+	  subtitle: "Convert JSON arrays into CSV format instantly",
+	  input: "Input JSON",
+	  output: "CSV Output",
+	  convert: "Convert",
+	  clear: "Clear",
+	  copy: "Copy",
+	  placeholder: "Paste a JSON array here...",
+	  empty: "Nothing to display yet",
+	  copied: "Copied to clipboard",
+	  invalid: "Invalid JSON input",
+	  invalidShape: "Input must be a JSON array of objects",
+	  download: "Download CSV",
   },
 
 } as const;

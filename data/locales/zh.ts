@@ -65,6 +65,9 @@ export const zh = {
 	
 	modbusResponseTool: "Modbus 响应解析器",
 	modbusResponseToolDesc: "解析 Modbus RTU 响应帧并显示寄存器数值",
+	
+	jsonToCsvTool: "JSON 转 CSV 工具",
+	jsonToCsvToolDesc: "即时将 JSON 数组转换为 CSV",
 
     comingSoon: "更多工具即将上线",
   },
@@ -410,6 +413,22 @@ export const zh = {
 	  ok: "正确",
 	  failed: "错误",
 	  unsupported: "当前解析器暂不支持该功能码"
+  },
+  
+  jsonToCsvTool: {
+	  title: "JSON 转 CSV 工具",
+	  subtitle: "即时将 JSON 数组转换为 CSV 格式",
+	  input: "输入 JSON",
+	  output: "CSV 输出",
+	  convert: "转换",
+	  clear: "清空",
+	  copy: "复制",
+	  placeholder: "在这里粘贴 JSON 数组……",
+	  empty: "这里还没有内容",
+	  copied: "已复制到剪贴板",
+	  invalid: "JSON 输入无效",
+	  invalidShape: "输入必须是由对象组成的 JSON 数组",
+	  download: "下载 CSV",
   },
 
 } as const;
