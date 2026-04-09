@@ -26,7 +26,30 @@ function escapeCsvValue(value: unknown) {
   return text;
 }
 
-function convertJsonArrayToCsv(input: string) {
+function flattenObject(
+  obj: Record<string, unknown>,
+  prefix = ""
+): Record<string, unknown> {
+  const result: Record<string, unknown> = {};
+
+  for (const [key, value] of Object.entries(obj)) {
+    const nextKey = prefix ? `${prefix}.${key}` : key;
+
+    if (
+      value !== null &&
+      typeof value === "object" &&
+      !Array.isArray(value)
+    ) {
+      Object.assign(result, flattenObject(value as Record<string, unknown>, nextKey));
+    } else {
+      result[nextKey] = value;
+    }
+  }
+
+  return result;
+}
+
+function convertJsonArrayToCsv(input: string, flatten: boolean) {
   const parsed = JSON.parse(input);
 
   if (!Array.isArray(parsed)) {
@@ -45,14 +68,18 @@ function convertJsonArrayToCsv(input: string) {
     throw new Error("INVALID_SHAPE");
   }
 
+  const records = parsed.map((item) => {
+    const record = item as Record<string, unknown>;
+    return flatten ? flattenObject(record) : record;
+  });
+
   const keys = Array.from(
-    new Set(parsed.flatMap((item) => Object.keys(item as Record<string, unknown>)))
+    new Set(records.flatMap((item) => Object.keys(item)))
   );
 
   const header = keys.map((key) => escapeCsvValue(key)).join(",");
 
-  const rows = parsed.map((item) => {
-    const record = item as Record<string, unknown>;
+  const rows = records.map((record) => {
     return keys.map((key) => escapeCsvValue(record[key])).join(",");
   });
 
@@ -70,10 +97,11 @@ export default function JsonToCsvPage({
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
   const [message, setMessage] = useState("");
+  const [flatten, setFlatten] = useState(false);
 
   function handleConvert() {
     try {
-      const csv = convertJsonArrayToCsv(input);
+      const csv = convertJsonArrayToCsv(input, flatten);
       setOutput(csv);
       setMessage("");
     } catch (error) {
@@ -92,6 +120,7 @@ export default function JsonToCsvPage({
     setInput("");
     setOutput("");
     setMessage("");
+    setFlatten(false);
   }
 
   async function handleCopy() {
@@ -163,6 +192,18 @@ export default function JsonToCsvPage({
             {dict.jsonToCsvTool.subtitle}
           </p >
         </header>
+
+        <div className="mb-4">
+          <label className="inline-flex items-center gap-2 text-sm text-zinc-600">
+            <input
+              type="checkbox"
+              checked={flatten}
+              onChange={(e) => setFlatten(e.target.checked)}
+              className="h-4 w-4"
+            />
+            {dict.jsonToCsvTool.flatten}
+          </label>
+        </div>
 
         <div className="mb-6 flex flex-wrap gap-3">
           <button

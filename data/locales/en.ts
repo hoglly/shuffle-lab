@@ -68,6 +68,9 @@ export const en = {
 	
 	jsonToCsvTool: "JSON to CSV Converter",
 	jsonToCsvToolDesc: "Convert JSON arrays into CSV instantly",
+	
+	csvToJsonTool: "CSV to JSON Converter",
+	csvToJsonToolDesc: "Convert CSV data into JSON instantly",
 
     comingSoon: "More tools coming soon",
   },
@@ -452,6 +455,22 @@ export const en = {
 	  invalid: "Invalid JSON input",
 	  invalidShape: "Input must be a JSON array of objects",
 	  download: "Download CSV",
+	  flatten: "Flatten nested fields",
+	  download: "Download CSV",
+  },
+  
+  csvToJsonTool: {
+	  title: "CSV to JSON Converter",
+	  subtitle: "Convert CSV rows into JSON objects instantly",
+	  input: "Input CSV",
+	  output: "JSON Output",
+	  convert: "Convert",
+	  clear: "Clear",
+	  copy: "Copy",
+	  placeholder: "Paste CSV here...",
+	  empty: "Nothing to display yet",
+	  copied: "Copied to clipboard",
+	  invalid: "Invalid CSV input"
   },
 
 } as const;

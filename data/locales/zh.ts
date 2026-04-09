@@ -68,6 +68,9 @@ export const zh = {
 	
 	jsonToCsvTool: "JSON 转 CSV 工具",
 	jsonToCsvToolDesc: "即时将 JSON 数组转换为 CSV",
+	
+	csvToJsonTool: "CSV 转 JSON 工具",
+	csvToJsonToolDesc: "即时将 CSV 数据转换为 JSON",
 
     comingSoon: "更多工具即将上线",
   },
@@ -429,6 +432,22 @@ export const zh = {
 	  invalid: "JSON 输入无效",
 	  invalidShape: "输入必须是由对象组成的 JSON 数组",
 	  download: "下载 CSV",
+	  flatten: "展开嵌套字段",
+      download: "下载 CSV",
+  },
+  
+  csvToJsonTool: {
+	  title: "CSV 转 JSON 工具",
+	  subtitle: "即时将 CSV 行数据转换为 JSON 对象",
+	  input: "输入 CSV",
+	  output: "JSON 输出",
+	  convert: "转换",
+	  clear: "清空",
+	  copy: "复制",
+	  placeholder: "在这里粘贴 CSV……",
+	  empty: "这里还没有内容",
+	  copied: "已复制到剪贴板",
+	  invalid: "CSV 输入无效"
   },
 
 } as const;

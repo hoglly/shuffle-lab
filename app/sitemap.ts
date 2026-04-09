@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	"/modbus-exception",
 	"/modbus-response",
 	"/json-to-csv",
+	"/csv-to-json",
   ];
 
   const langs = ["en", "zh"];
