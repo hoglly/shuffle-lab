@@ -456,7 +456,6 @@ export const en = {
 	  invalidShape: "Input must be a JSON array of objects",
 	  download: "Download CSV",
 	  flatten: "Flatten nested fields",
-	  download: "Download CSV",
   },
   
   csvToJsonTool: {
