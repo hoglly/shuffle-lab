@@ -433,7 +433,6 @@ export const zh = {
 	  invalidShape: "输入必须是由对象组成的 JSON 数组",
 	  download: "下载 CSV",
 	  flatten: "展开嵌套字段",
-      download: "下载 CSV",
   },
   
   csvToJsonTool: {
