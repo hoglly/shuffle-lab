@@ -71,6 +71,9 @@ export const en = {
 	
 	csvToJsonTool: "CSV to JSON Converter",
 	csvToJsonToolDesc: "Convert CSV data into JSON instantly",
+	
+	shuffleNewsFormatter: "Shuffle News Formatter",
+	shuffleNewsFormatterDesc: "Format bilingual news drafts into styled HTML",
 
     comingSoon: "More tools coming soon",
   },
@@ -470,6 +473,19 @@ export const en = {
 	  empty: "Nothing to display yet",
 	  copied: "Copied to clipboard",
 	  invalid: "Invalid CSV input"
+  },
+  
+  shuffleNewsFormatterTool: {
+	  title: "Shuffle News Formatter",
+	  subtitle: "Format bilingual news drafts into styled HTML for Shuffle News",
+	  input: "Input Draft",
+	  output: "HTML Output",
+	  preview: "Preview",
+	  generate: "Format",
+	  copy: "Copy Formatted Content",
+	  clear: "Clear",
+	  copied: "Copied to clipboard",
+	  placeholder: "Paste your bilingual news draft here..."
   },
 
 } as const;

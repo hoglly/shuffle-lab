@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	"/modbus-response",
 	"/json-to-csv",
 	"/csv-to-json",
+	"/shuffle-news-formatter",
   ];
 
   const langs = ["en", "zh"];
