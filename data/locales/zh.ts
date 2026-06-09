@@ -73,7 +73,7 @@ export const zh = {
 	csvToJsonToolDesc: "即时将 CSV 数据转换为 JSON",
 	
 	shuffleNewsFormatter: "Shuffle News 排版工具",
-	shuffleNewsFormatterDesc: "将双语新闻稿整理成带样式的 HTML",
+	shuffleNewsFormatterDesc: "将双语新闻稿整理成可直接发布的内容",
 
     comingSoon: "更多工具即将上线",
   },
@@ -454,15 +454,14 @@ export const zh = {
   
   shuffleNewsFormatterTool: {
 	  title: "Shuffle News 排版工具",
-	  subtitle: "将双语新闻稿整理成适合 Shuffle News 的 HTML 排版",
-	  input: "输入稿件",
-	  output: "HTML 输出",
-	  preview: "预览",
+	  subtitle: "将双语新闻稿整理成可直接发布的内容",
+	  input: "原始稿件",
+	  preview: "排版预览",
 	  generate: "排版",
 	  copy: "复制排版内容",
 	  clear: "清空",
 	  copied: "已复制到剪贴板",
 	  placeholder: "在这里粘贴双语新闻稿……"
-  },
+  }
 
 } as const;
